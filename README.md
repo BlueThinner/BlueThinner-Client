@@ -1,6 +1,6 @@
 # BlueThinner-Client
-A BlueThinner client coded in C#, WPF.
-###Contributors:
+A BlueThinner client coded in C#, WPF.  
+### Contributors:
 - EMP (EpicMickeyPro), project lead;
 - Ruttie (Ruttie2006), developer.
 ### NOTE: Very early in development
