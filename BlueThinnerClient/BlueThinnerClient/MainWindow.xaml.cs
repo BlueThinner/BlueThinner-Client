@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueThinnerClient.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,26 +29,9 @@ namespace BlueThinnerClient
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ToolsWindow toolsWindow = new();
             DefinitionLBL.Content = "Sending you to Tools...";
-            _ = toolsWindow.ShowDialog();
-            DefinitionLBL.Content = "Welcome back.";
-            Task.Delay(5000).GetAwaiter().GetResult();
+            new ToolsWindow().OpenNew().Await();
             DefinitionLBL.Content = "Main";
         }
-
-        public static async Task StartWindow(Window target)
-        {
-            var opened = target.ShowDialog();
-            if (opened ?? false)
-            {
-
-            }
-            else if (!opened ?? true)
-            {
-
-            }
-        }
-        
     }
 }
